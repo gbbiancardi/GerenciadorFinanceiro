@@ -1,0 +1,17 @@
+.main {
+    position: relative;
+}
+
+.sessao-01 {
+    background-color: plum;
+}
+
+.texto-sessao01 {
+    color: white;
+    font-size: 2.7em;
+}
+
+.titulo-centralizado {
+    text-align: center;
+    font-size: 3em;
+}
