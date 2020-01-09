@@ -1,14 +1,24 @@
 .main {
     position: relative;
+    padding-left: 0em;
+    padding-right: 0em;
 }
 
+header {
+    background-color: #563d7c;
+}
+
+section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 .sessao-01 {
-    background-color: plum;
+    padding-left: 8em;
 }
 
 .texto-sessao01 {
     color: white;
-    font-size: 2.7em;
+    font-size: 3.5em;
 }
 
 .titulo-centralizado {
@@ -16,6 +26,6 @@
     font-size: 3em;
 }
 
-.btn-link {
-    color: purple;
+.btn-link, .btn-light {
+    color: #563d7c;
 }

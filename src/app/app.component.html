@@ -7,8 +7,7 @@
 </head>
 
 <body>
-  <header class="navbar navbar-expand navbar-dark flex-column flex-md-row navbar-bg text-white sticky-top"
-    style="background-color: #563d7c">
+  <header class="navbar navbar-expand navbar-dark flex-column flex-md-row navbar-bg text-white sticky-top">
     <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Moneyger">
       <img class="d-inline-block align-middle ml-5" src="../assets/img/moneyger-logo-white.png" width="40" height="40"
         alt="Logo">
@@ -22,22 +21,28 @@
         <a class="nav-link" href="#">Como Funciona</a>
       </li>
     </ul>
+    <div class="botoes-header ml-auto">
+      <a class="btn btn-light mr-2" href="#">Cadastre-se</a>
+      <a class="btn btn-light" href="#">Login</a>
+    </div>
   </header>
 
-  <div class="main container position-relative">
+  <div class="main container-fluid position-relative">
 
-    <div class="sessao-01 row">
-      <div class="col">
-        <p class="texto-sessao01">Gerencie Suas Finanças <strong>Sem Complicação</strong></p>
-        <input type="email">
-        <input type="button" value="Cadastre-se">
+    <section class="sessao-01 bg-danger">
+      <div class="row">
+        <div class="col-sm-6 align-self-center">
+          <p class="texto-sessao01">Gerencie Suas Finanças <strong>Sem Complicação</strong></p>
+          <input type="email">
+          <input type="button" value="Cadastre-se">
+        </div>
+        <div class="col-sm-6">
+          <img src="../assets/img/img-sessao01.jpg" alt="Mulher sorrindo" width="400">
+        </div>
       </div>
-      <div class="col">
-        <img src="../assets/img/img-sessao01.jpg" alt="Mulher sorrindo" width="400">
-      </div>
-    </div>
+    </section>
 
-    <div class="sessao-02">
+    <section class="sessao-02">
       <p class="titulo-centralizado">
         <strong>Sobre</strong>
       </p>
@@ -63,9 +68,9 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="sessao-03">
+    <section class="sessao-03">
       <p class="titulo-centralizado">
         <strong>Como Funciona</strong>
       </p>
@@ -97,9 +102,9 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga, quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt facilis consequatur labore?</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="sessao-03">
+    <section class="sessao-04">
       <p class="titulo-centralizado">
         <strong>FAQ</strong>
       </p>
@@ -150,7 +155,7 @@
         </div>
       </div>
       
-    </div>
+    </section>
 
     <footer class="container py-5">
       <div class="row">
