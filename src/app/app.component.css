@@ -5,7 +5,7 @@
 }
 
 header {
-    background-color: #563d7c;
+    background-color: #6727F2;
 }
 
 section {
@@ -13,12 +13,25 @@ section {
     padding-right: 2rem;
 }
 .sessao-01 {
-    padding-left: 8em;
+    background-image: linear-gradient(141deg, #6C87D9 0%, #7350F2 51%, #6727F2 75%);
+    padding-left: 7.5em;
 }
 
 .texto-sessao01 {
     color: white;
     font-size: 3.5em;
+}
+
+.sessao-02 {
+    background-color: #F0F0F2;
+}
+
+.sessao-03 {
+    background-color: #F0F0F2;
+}
+
+.sessao-04 {
+    background-color: #F0F0F2;
 }
 
 .titulo-centralizado {
@@ -28,4 +41,10 @@ section {
 
 .btn-link, .btn-light {
     color: #563d7c;
+}
+
+footer {
+    padding-left: 7.5em;
+    background-color: #6727F2;
+    color: white;
 }
