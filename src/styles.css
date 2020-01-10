@@ -4,3 +4,7 @@
 .break-word {
     word-break: break-all;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}

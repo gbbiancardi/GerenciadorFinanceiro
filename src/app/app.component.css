@@ -1,7 +1,19 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
 .main {
     position: relative;
     padding-left: 0em;
     padding-right: 0em;
+}
+
+h3 {
+    color: #4713b8;
+}
+
+p, .card-body {
+    color: #4d4d4d;
 }
 
 header {
@@ -37,11 +49,11 @@ section {
 .titulo-centralizado {
     text-align: center;
     font-size: 3em;
-    color: #6727F2;
+    color: #4713b8;
 }
 
 .btn-link, .btn-light {
-    color: #563d7c;
+    color: #4713b8;
 }
 
 footer {
