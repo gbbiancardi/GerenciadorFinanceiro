@@ -13,8 +13,7 @@ const routes: Routes = [
     {
       path: 'dashboard',
       component: GraficoComponent
-    }
-
+    },
 ];
 
 @NgModule({

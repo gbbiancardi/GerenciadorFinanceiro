@@ -5,7 +5,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
 
 @Component({
-    templateUrl: './signin.component.html'
+    selector: 'app-signin',
+    templateUrl: './signin.component.html',
+    styleUrls: ['./signin.component.css']
 })
 
 export class SignInComponent implements OnInit {
