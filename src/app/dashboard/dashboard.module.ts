@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+import { ChartsModule } from 'ng2-charts';
 
 import { HeaderComponent } from '../core/header/header.component';
 import { AtualizaComponent } from './atualiza/atualiza.component';
@@ -18,7 +21,9 @@ import { GraficoComponent } from './grafico/grafico.component';
     GraficoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    ChartsModule
   ],
   exports: [
     HeaderComponent

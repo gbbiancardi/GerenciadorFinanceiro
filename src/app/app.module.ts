@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeModule } from './home/home.module';
 import { SignInComponent } from './home/signin/signin.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SignInComponent } from './home/signin/signin.component';
   imports: [
     BrowserModule,
     DashboardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

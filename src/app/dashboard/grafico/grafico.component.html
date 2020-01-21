@@ -1,6 +1,53 @@
 <app-header></app-header>
 <main class="container-fluid position-relative">
-    <section>
-        <h1>TESTE!!!</h1>
+    <section class="container">
+        <div class="row">
+            <div class="col-6">
+                <div style="display: block">
+                    <canvas baseChart 
+                        [datasets]="barChartData" 
+                        [labels]="barChartLabels" 
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend" 
+                        [chartType]="barChartType">
+                    </canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div style="display: block">
+                    <canvas baseChart 
+                        [datasets]="barChartData" 
+                        [labels]="barChartLabels" 
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend" 
+                        [chartType]="barChartType">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div style="display: block">
+                    <canvas baseChart 
+                        [datasets]="barChartData" 
+                        [labels]="barChartLabels" 
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend" 
+                        [chartType]="barChartType">
+                    </canvas>
+                </div>
+            </div>
+            <div class="col-6">
+                <div style="display: block">
+                    <canvas baseChart 
+                        [datasets]="barChartData" 
+                        [labels]="barChartLabels" 
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend" 
+                        [chartType]="barChartType">
+                    </canvas>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
