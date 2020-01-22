@@ -1,6 +1,37 @@
 <app-header></app-header>
 <main class="container-fluid position-relative">
-    <section class="container">
-        <h1>TESTE OBJETIVO!!!</h1>
-    </section>
+    <div class="container">
+        <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1>Objetivo</h1>
+        </div>
+        <form action="cadastroObjetivo">
+            <div class="form-group">
+                <label for="objetivoUsuario">Objetivo</label>
+                <input type="text" class="form-control" name="objetivoUsuario" id="objetivoUsuario"
+                    placeholder="Digite aqui seu objetivo" required="required">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="metaUsuario">Meta</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" name="metaUsuario" id="metaUsuario"
+                            placeholder="Digite aqui sua meta a ser poupada" required="required" min="0.00"
+                            max="10000000.00" step="0.01">
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="dataMeta">Data Estipulada</label>
+                    <input type="date" class="form-control" name="dataMeta" id="dataMeta" required="required">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6 botao-enviar-objetivo">
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </main>
