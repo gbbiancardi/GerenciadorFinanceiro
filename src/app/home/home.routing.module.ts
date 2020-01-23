@@ -10,7 +10,7 @@ const routes: Routes = [
         path: '',
         component: HomeComponent,
         data: {
-            title: 'Moneyger - Gerenciador Financeiro'
+            title: 'Moneyger - Seu Sistema de Gerenciamento Financeiro'
         },
         children: [
             {
@@ -29,6 +29,7 @@ const routes: Routes = [
             }
         ]
     },
+    
     
 ];
 

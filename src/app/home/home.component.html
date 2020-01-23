@@ -7,14 +7,14 @@
     </a>
     <ul class="navbar-nav flex-row">
       <li class="nav-item mt-1 ml-3">
-        <a class="nav-link text-white" href="#">Sobre Nós</a>
+        <a class="nav-link text-white" href="#sobre">Sobre Nós</a>
       </li>
       <li class="nav-item mt-1">
-        <a class="nav-link text-white" href="#">Como Funciona</a>
+        <a class="nav-link text-white" href="#como-funciona">Como Funciona</a>
       </li>
     </ul>
     <div class="botoes-header ml-auto">
-      <a class="btn btn-light mr-2" [routerLink]="[ '/signup' ]">Cadastre-se</a>
+      <a class="btn btn-light mr-2" [routerLink]="[ '/signin' ]">Cadastre-se</a>
       <a class="btn btn-light mr-5" [routerLink]="[ '/dashboard' ]">Login</a>
     </div>
   </header>
@@ -38,7 +38,7 @@
       </div>
     </section>
 
-    <section class="sessao-02 pt-5">
+    <section id="sobre" class="sessao-02 pt-5">
       <p class="titulo-centralizado">
         <strong class="mb-2">Sobre</strong>
       </p>
@@ -66,7 +66,7 @@
       </div>
     </section>
 
-    <section class="sessao-03 pt-5">
+    <section id="como-funciona" class="sessao-03 pt-5">
       <p class="titulo-centralizado">
         <strong>Como Funciona</strong>
       </p>
