@@ -10,6 +10,8 @@ import { ObjetivoComponent } from './objetivo/objetivo.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { SuporteComponent } from './suporte/suporte.component';
 import { GraficoComponent } from './grafico/grafico.component';
+import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { GraficoComponent } from './grafico/grafico.component';
     ObjetivoComponent,
     PerfilComponent,
     SuporteComponent,
-    GraficoComponent
+    GraficoComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    ChartsModule
+    ChartsModule,
+    DashboardRoutingModule
   ],
   exports: [
     HeaderComponent

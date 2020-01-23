@@ -10,20 +10,22 @@ import { AtualizaComponent } from './dashboard/atualiza/atualiza.component';
 const routes: Routes = [
     {
       path: '',
-      component: HomeComponent
+      pathMatch: 'full',
+      redirectTo: 'home'
+    },
+    {
+      path: 'home',
+      loadChildren: './home/home.module#HomeModule'
     },
     {
       path: 'dashboard',
-      component: GraficoComponent
+      pathMatch: 'full',
+      redirectTo: 'dashboard'
     },
     {
-      path: 'objetivo',
-      component: ObjetivoComponent
-    },
-    {
-      path: 'atualiza',
-      component: AtualizaComponent
-    },
+      path: 'dashboard',
+      loadChildren: './dashboard/dashboard.module#DashboardModule'
+    }
 
 ];
 
