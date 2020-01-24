@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
     {
       path: '',
-      pathMatch: 'full',
-      redirectTo: 'home'
+      component: HomeComponent,
+      data: {
+        title: 'Moneyger - Seu Sistema de Gerenciamento Financeiro'
+    }
     },
     {
-      path: 'home',
-      loadChildren: './home/home.module#HomeModule'
+      path: 'login',
+      pathMatch: 'full',
+      redirectTo: 'login'
+    },
+    {
+      path: 'login',
+      loadChildren: './login/login.module#LoginModule'
     },
     {
       path: 'dashboard',

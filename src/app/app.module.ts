@@ -6,6 +6,7 @@ import { ChartsModule } from 'ng2-charts';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeModule } from './home/home.module';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HomeModule } from './home/home.module';
     ChartsModule,
     DashboardModule,
     HomeModule,
+    LoginModule,
     AppRoutingModule
   ],
   providers: [],

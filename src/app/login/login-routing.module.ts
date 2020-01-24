@@ -1,35 +1,35 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home.component';
 import { SignInComponent } from './signin/signin.component';
+import { LoginComponent } from './login.component';
 import { SignUpComponent } from './signup/signup.component';
+
 
 const routes: Routes = [
     {
-        path: '',
-        component: HomeComponent,
+        path: 'login',
+        component: LoginComponent,
         data: {
-            title: 'Moneyger - Seu Sistema de Gerenciamento Financeiro'
+            title: 'Moneyger - Login'
         },
         children: [
             {
-                path: 'signin',
+                path: '',
                 component: SignInComponent,
                 data: {
-                    title: 'Sign in'
+                    title: 'Moneyger - Login'
                 }
             },
             {
-                path: 'signup',
+                path: 'cadastro',
                 component: SignUpComponent,
                 data: {
-                    title: 'Sign up'
+                    title: 'Moneyger - Cadastro'
                 }
             }
         ]
     },
-    
     
 ];
 
@@ -43,4 +43,4 @@ const routes: Routes = [
 
 })
 
-export class HomeRoutingModule { }
+export class LoginRoutingModule { }

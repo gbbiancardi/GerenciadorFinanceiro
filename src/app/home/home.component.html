@@ -1,204 +1,204 @@
 <body>
-  <header class="navbar navbar-expand navbar-dark flex-column flex-md-row navbar-bg text-white sticky-top">
-    <a class="navbar-brand mr-0 mr-md-2 ml-5" href="/" aria-label="Moneyger">
-      <img class="d-inline-block align-middle" src="../assets/img/moneyger-logo-white.png" width="40" height="40"
-        alt="Logo">
-      <span class="align-middle ml-2">Moneyger</span>
-    </a>
-    <ul class="navbar-nav flex-row">
-      <li class="nav-item mt-1 ml-3">
-        <a class="nav-link text-white" href="#sobre">Sobre Nós</a>
-      </li>
-      <li class="nav-item mt-1">
-        <a class="nav-link text-white" href="#como-funciona">Como Funciona</a>
-      </li>
-    </ul>
-    <div class="botoes-header ml-auto">
-      <a class="btn btn-light mr-2" [routerLink]="[ '/signin' ]">Cadastre-se</a>
-      <a class="btn btn-light mr-5" [routerLink]="[ '/dashboard' ]">Login</a>
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row navbar-bg text-white sticky-top">
+      <a class="navbar-brand mr-0 mr-md-2 ml-5" href="/" aria-label="Moneyger">
+        <img class="d-inline-block align-middle" src="../assets/img/moneyger-logo-white.png" width="40" height="40"
+          alt="Logo">
+        <span class="align-middle ml-2">Moneyger</span>
+      </a>
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item mt-1 ml-3">
+          <a class="nav-link text-white" href="#sobre">Sobre Nós</a>
+        </li>
+        <li class="nav-item mt-1">
+          <a class="nav-link text-white" href="#como-funciona">Como Funciona</a>
+        </li>
+      </ul>
+      <div class="botoes-header ml-auto">
+        <a class="btn btn-light mr-2" [routerLink]="[ '/login' ]">Cadastre-se</a>
+        <a class="btn btn-light mr-5" [routerLink]="[ '/dashboard' ]">Login</a>
+      </div>
+    </header>
+  
+    <div class="main container-fluid position-relative">
+  
+      <section class="sessao-01">
+        <div class="row">
+          <div class="col-sm-6 align-self-center mb-5">
+            <p class="texto-sessao01">Gerencie Suas Finanças <strong>Sem Complicação</strong></p>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-light ml-1" type="button" id="button-addon2">Cadastre-se</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <img src="../assets/img/img-sessao01.png" alt="Mulher sorrindo"  width="500">
+          </div>
+        </div>
+      </section>
+  
+      <section id="sobre" class="sessao-02 pt-5">
+        <p class="titulo-centralizado">
+          <strong class="mb-2">Sobre</strong>
+        </p>
+        <div class="row justify-content-center pt-3">
+          <div class="col-sm-2 d-inline-block mx-3 text-center">
+            <img class="mb-2" src="../assets/img/icons/goal.png" alt="Img" width="140px">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="col-sm-2 d-inline-block mx-3 text-center">
+            <img class="mb-2" src="../assets/img/icons/money.png" alt="Img" width="140px">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="col-sm-2 d-inline-block mx-3 text-center">
+            <img class="mb-2" src="../assets/img/icons/payment.png" alt="Img" width="140px">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="col-sm-2 d-inline-block mx-3 text-center">
+            <img class="mb-2" src="../assets/img/icons/money_goal.png" alt="Img" width="140px">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+  
+      <section id="como-funciona" class="sessao-03 pt-5">
+        <p class="titulo-centralizado">
+          <strong>Como Funciona</strong>
+        </p>
+  
+        <div class="row px-5 pt-3 mx-5">
+          <div class="col-md-2 order-md-1">
+            <img src="../assets/img/icons/mountains.png" alt="Img" width="140px">
+          </div>
+          <div class="col-md-10 order-md-2">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga, quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt facilis consequatur labore?</p>
+          </div>
+        </div>
+        <div class="row px-5 pt-3 mx-5">
+          <div class="col-md-10 order-md-1">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga, quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt facilis consequatur labore?</p>
+          </div>
+          <div class="col-md-2 order-md-2">
+            <img src="../assets/img/icons/money_pig.png" alt="Img" width="140px">
+          </div>
+        </div>
+        <div class="row px-5 pt-3 mx-5">
+          <div class="col-md-2 order-md-1">
+            <img src="../assets/img/icons/overcome.png" alt="Img" width="140px">
+          </div>
+          <div class="col-md-10 order-md-2">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga, quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt facilis consequatur labore?</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="sessao-04 py-5">
+        <p class="titulo-centralizado">
+          <strong>FAQ</strong>
+        </p>
+        
+        <div class="accordion pt-3 container" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Collapsible Group Item #1
+                </button>
+              </h2>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Collapsible Group Item #2
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Collapsible Group Item #3
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+  
+      <footer class="py-5">
+        <div class="row px-0 mx-0">
+          <div class="col-12 col-md">
+            <img src="../assets/img/moneyger-logo-white.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title>
+            <small class="d-block mb-3 text-white">© 2020</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="#">Cool stuff</a></li>
+              <li><a class="text-white" href="#">Random feature</a></li>
+              <li><a class="text-white" href="#">Team feature</a></li>
+              <li><a class="text-white" href="#">Stuff for developers</a></li>
+              <li><a class="text-white" href="#">Another one</a></li>
+              <li><a class="text-white" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="#">Resource</a></li>
+              <li><a class="text-white" href="#">Resource name</a></li>
+              <li><a class="text-white" href="#">Another resource</a></li>
+              <li><a class="text-white" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="#">Business</a></li>
+              <li><a class="text-white" href="#">Education</a></li>
+              <li><a class="text-white" href="#">Government</a></li>
+              <li><a class="text-white" href="#">Gaming</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="#">Team</a></li>
+              <li><a class="text-white" href="#">Locations</a></li>
+              <li><a class="text-white" href="#">Privacy</a></li>
+              <li><a class="text-white" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+  
     </div>
-  </header>
-
-  <div class="main container-fluid position-relative">
-
-    <section class="sessao-01">
-      <div class="row">
-        <div class="col-sm-6 align-self-center mb-5">
-          <p class="texto-sessao01">Gerencie Suas Finanças <strong>Sem Complicação</strong></p>
-          <div class="input-group">
-            <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-light ml-1" type="button" id="button-addon2">Cadastre-se</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <img src="../assets/img/img-sessao01.png" alt="Mulher sorrindo"  width="500">
-        </div>
-      </div>
-    </section>
-
-    <section id="sobre" class="sessao-02 pt-5">
-      <p class="titulo-centralizado">
-        <strong class="mb-2">Sobre</strong>
-      </p>
-      <div class="row justify-content-center pt-3">
-        <div class="col-sm-2 d-inline-block mx-3 text-center">
-          <img class="mb-2" src="../assets/img/icons/goal.png" alt="Img" width="140px">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="col-sm-2 d-inline-block mx-3 text-center">
-          <img class="mb-2" src="../assets/img/icons/money.png" alt="Img" width="140px">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="col-sm-2 d-inline-block mx-3 text-center">
-          <img class="mb-2" src="../assets/img/icons/payment.png" alt="Img" width="140px">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-        <div class="col-sm-2 d-inline-block mx-3 text-center">
-          <img class="mb-2" src="../assets/img/icons/money_goal.png" alt="Img" width="140px">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="como-funciona" class="sessao-03 pt-5">
-      <p class="titulo-centralizado">
-        <strong>Como Funciona</strong>
-      </p>
-
-      <div class="row px-5 pt-3 mx-5">
-        <div class="col-md-2 order-md-1">
-          <img src="../assets/img/icons/mountains.png" alt="Img" width="140px">
-        </div>
-        <div class="col-md-10 order-md-2">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga, quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt facilis consequatur labore?</p>
-        </div>
-      </div>
-      <div class="row px-5 pt-3 mx-5">
-        <div class="col-md-10 order-md-1">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga, quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt facilis consequatur labore?</p>
-        </div>
-        <div class="col-md-2 order-md-2">
-          <img src="../assets/img/icons/money_pig.png" alt="Img" width="140px">
-        </div>
-      </div>
-      <div class="row px-5 pt-3 mx-5">
-        <div class="col-md-2 order-md-1">
-          <img src="../assets/img/icons/overcome.png" alt="Img" width="140px">
-        </div>
-        <div class="col-md-10 order-md-2">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga, quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt facilis consequatur labore?</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="sessao-04 py-5">
-      <p class="titulo-centralizado">
-        <strong>FAQ</strong>
-      </p>
-      
-      <div class="accordion pt-3 container" id="accordionExample">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Collapsible Group Item #1
-              </button>
-            </h2>
-          </div>
-      
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Collapsible Group Item #2
-              </button>
-            </h2>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Collapsible Group Item #3
-              </button>
-            </h2>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </section>
-
-    <footer class="py-5">
-      <div class="row px-0 mx-0">
-        <div class="col-12 col-md">
-          <img src="../assets/img/moneyger-logo-white.png" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title>
-          <small class="d-block mb-3 text-white">© 2020</small>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Features</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-white" href="#">Cool stuff</a></li>
-            <li><a class="text-white" href="#">Random feature</a></li>
-            <li><a class="text-white" href="#">Team feature</a></li>
-            <li><a class="text-white" href="#">Stuff for developers</a></li>
-            <li><a class="text-white" href="#">Another one</a></li>
-            <li><a class="text-white" href="#">Last time</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-white" href="#">Resource</a></li>
-            <li><a class="text-white" href="#">Resource name</a></li>
-            <li><a class="text-white" href="#">Another resource</a></li>
-            <li><a class="text-white" href="#">Final resource</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-white" href="#">Business</a></li>
-            <li><a class="text-white" href="#">Education</a></li>
-            <li><a class="text-white" href="#">Government</a></li>
-            <li><a class="text-white" href="#">Gaming</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-white" href="#">Team</a></li>
-            <li><a class="text-white" href="#">Locations</a></li>
-            <li><a class="text-white" href="#">Privacy</a></li>
-            <li><a class="text-white" href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-
-  </div>
-</body>
+  </body>
