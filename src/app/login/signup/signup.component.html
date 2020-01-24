@@ -1,1 +1,39 @@
-<h1>TESTE!!</h1>
+<div class="container text-center">
+    
+    <form class="form-signup">
+        <img src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger" width="200" height="200">
+        <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
+        
+        <div class="form-group">
+            <input #userNameInput
+            formControlName="userName" 
+            class="form-control" 
+            placeholder="Nome Completo" 
+            autofocus>
+        </div>
+
+        <div class="form-group">
+            <input #userEmailInput
+            formControlName="userEmail" 
+            class="form-control" 
+            placeholder="E-mail" 
+            autofocus>
+        </div>
+
+        <div class="form-group">
+            <input 
+            formControlName="password" 
+            type="password" 
+            class="form-control" 
+            placeholder="Senha">
+        </div>
+        
+        <button type="submit" [routerLink]="[ '/dashboard' ]" class="btn btn-primary btn-block">Logar</button>
+        
+    </form>
+    
+    <a class="btn btn-light" [routerLink]="[ '/' ]">Voltar para a Home</a>
+    <p>Já é cadastrado? <a [routerLink]="['/login']">Faça login!</a></p>
+    
+    <p class="mt-4 mb-3 text-muted">© 2020</p>
+</div>
