@@ -3,65 +3,107 @@
         <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1>Dashboard</h1>
         </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div style="display: block">
-                            <canvas baseChart 
-                                [datasets]="barChartData" 
-                                [labels]="barChartLabels" 
-                                [options]="barChartOptions"
-                                [legend]="barChartLegend" 
-                                [chartType]="barChartType">
-                            </canvas>
+        <div class="desktop-layout">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: block">
+                                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels"
+                                    [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: block">
+                                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+                                    [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType">
+                                </canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div style="display: block">
-                            <canvas baseChart 
-                                [datasets]="lineChartData" 
-                                [labels]="lineChartLabels" 
-                                [options]="lineChartOptions"
-                                [legend]="lineChartLegend" 
-                                [chartType]="lineChartType">
-                            </canvas>
+            <div class="row pt-4 pb-4">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: block">
+                                <canvas baseChart [datasets]="pieChartData" [labels]="pieChartLabels"
+                                    [options]="pieChartOptions" [legend]="pieChartLegend" [chartType]="pieChartType">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: block">
+                                <canvas baseChart [datasets]="polarChartData" [labels]="polarChartLabels"
+                                    [options]="polarChartOptions" [legend]="polarChartLegend"
+                                    [chartType]="polarChartType">
+                                </canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row pt-4 pb-4">
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div style="display: block">
-                            <canvas baseChart 
-                                [datasets]="pieChartData" 
-                                [labels]="pieChartLabels" 
-                                [options]="pieChartOptions"
-                                [legend]="pieChartLegend" 
-                                [chartType]="pieChartType">
-                            </canvas>
+        <div class="mobile-layout">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: block">
+                                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels"
+                                    [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType">
+                                </canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div style="display: block">
-                            <canvas baseChart 
-                                [datasets]="polarChartData" 
-                                [labels]="polarChartLabels" 
-                                [options]="polarChartOptions"
-                                [legend]="polarChartLegend" 
-                                [chartType]="polarChartType">
-                            </canvas>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: block">
+                                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
+                                    [options]="lineChartOptions" [legend]="lineChartLegend" [chartType]="lineChartType">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: block">
+                                <canvas baseChart [datasets]="pieChartData" [labels]="pieChartLabels"
+                                    [options]="pieChartOptions" [legend]="pieChartLegend" [chartType]="pieChartType">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-3">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: block">
+                                <canvas baseChart [datasets]="polarChartData" [labels]="polarChartLabels"
+                                    [options]="polarChartOptions" [legend]="polarChartLegend"
+                                    [chartType]="polarChartType">
+                                </canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
