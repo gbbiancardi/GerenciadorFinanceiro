@@ -2,6 +2,45 @@ header {
     background-color: #6727F2;
 }
 
+.navbar-nav {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.icone-grafico {
+    margin-left: 4.5em;
+}
+
+.div-dropdown {
+    margin-left: auto;
+}
+
+.botao-dropdown {
+    margin-right: 4.5em;
+}
+
 .btn-link, .btn-light {
     color: #4713b8;
+}
+
+@media screen and (max-width: 414px) {
+
+    .navbar-nav {
+        padding-top: 0.5em;
+        padding-bottom: 1em;
+    }
+
+    .icone-grafico {
+        margin-left: 0%;
+    }
+
+    .div-dropdown {
+        margin-left: 0%;
+        padding-bottom: 0.5em;
+    }
+    
+    .botao-dropdown {
+        margin-right: 0em;
+    }
+
 }
