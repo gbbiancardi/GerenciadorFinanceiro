@@ -27,7 +27,7 @@ const routes: Routes = [
                 data: {
                     title: 'Moneyger - Cadastro'
                 }
-            }
+            },
         ]
     },
     
