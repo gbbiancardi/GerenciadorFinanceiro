@@ -5,3 +5,19 @@
 .login-img{
     width: 38.2rem;
 }
+
+.row-login-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 414px) {
+
+    .row-login-desktop {
+        display: none;
+    }
+    
+    .row-login-mobile {
+        display: block;
+    }
+
+}
