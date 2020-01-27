@@ -1,0 +1,11 @@
+@media screen and (max-width: 414px) {
+
+    .botoes {
+        width: 25%;
+    }
+
+    .div-botoes {
+        text-align: center;
+    }
+
+}
