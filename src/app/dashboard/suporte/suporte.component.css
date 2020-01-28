@@ -1,0 +1,24 @@
+.img-perfil {
+    width: 10rem;
+}
+
+.btn-primary {
+    background-color: #6727F2;
+    border: none;
+}
+
+.mobile-layout{
+    display: none;
+}
+
+@media screen and (max-width: 414px) {
+
+    .desktop-layout {
+        display: none;
+    }
+    
+    .mobile-layout {
+        display: block;
+    }
+
+}
