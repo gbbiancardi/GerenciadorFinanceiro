@@ -7,6 +7,7 @@ import { ChartsModule } from 'ng2-charts';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
+import { ErrorsModule } from './errors/errors.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { LoginModule } from './login/login.module';
     ChartsModule,
     DashboardModule,
     HomeModule,
+    ErrorsModule,
     LoginModule,
     AppRoutingModule
   ],
