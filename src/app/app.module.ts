@@ -9,7 +9,6 @@ import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
 import { ErrorsModule } from './errors/errors.module';
 import { CoreModule } from './core/core.module';
-import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [

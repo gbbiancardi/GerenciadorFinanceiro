@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SignInComponent } from './signin/signin.component';
 import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { SignUpComponent } from './signup/signup.component';
 import { SignUpService } from './signup/signup.service';
+import { VMessageModule } from '../shared/components/vmessage/vmessage.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,9 @@ import { SignUpService } from './signup/signup.service';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    VMessageModule,
     LoginRoutingModule
   ],
   providers: [
