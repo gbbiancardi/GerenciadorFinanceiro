@@ -12,10 +12,10 @@ import { SuporteComponent } from './suporte/suporte.component';
 import { GraficoComponent } from './grafico/grafico.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
     AtualizaComponent,
     ObjetivoComponent,
     PerfilComponent,
@@ -27,6 +27,7 @@ import { DashboardComponent } from './dashboard.component';
     CommonModule,
     RouterModule,
     ChartsModule,
+    CoreModule,
     DashboardRoutingModule
   ],
   exports: [
