@@ -51,16 +51,28 @@
                 <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
 
                 <div class="form-group">
-                    <input formControlName="nome" class="form-control" placeholder="Nome Completo" minlength="9" maxlength="55" pattern="[a-zA-Z ]*">
+                    <input formControlName="nome" class="form-control" placeholder="Nome Completo" minlength="9"
+                        maxlength="55" pattern="[a-zA-Z ]*"
+                        [ngClass]="{'is-invalid': signUpForm.get('nome').touched && signUpForm.get('nome').invalid}">
+                    <div class="invalid-feedback">
+                        <div>Nome é obrigatório!</div>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <input type="email" formControlName="email" class="form-control" placeholder="E-mail"
-                        [email]="true">
+                    <input type="email" formControlName="email" class="form-control" placeholder="E-mail" [email]="true"
+                        [ngClass]="{'is-invalid': signUpForm.get('email').touched && signUpForm.get('email').invalid}">
+                    <div class=" invalid-feedback">
+                        <div>E-mail é obrigatório!</div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <input formControlName="senha" type="password" class="form-control" placeholder="Senha">
+                <div class=" form-group">
+                    <input formControlName="senha" type="password" class="form-control" placeholder="Senha"
+                        [ngClass]="{'is-invalid': signUpForm.get('senha').touched && signUpForm.get('senha').invalid}">
+                    <div class=" invalid-feedback">
+                        <div>Senha é obrigatória!</div>
+                    </div>
                 </div>
 
                 <button (click)="onSubmit()" [disabled]="!signUpForm.valid" type="submit" [routerLink]="[ '/login' ]"
