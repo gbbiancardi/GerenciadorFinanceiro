@@ -10,9 +10,27 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class SignUpComponent implements OnInit {
 
     signUpForm = this.fb.group({
-        nome: ['', Validators.required],
-        email: ['', Validators.required],
-        senha: ['', Validators.required]
+        nome: ['', 
+                [
+                    Validators.required, 
+                    Validators.minLength(6), 
+                    Validators.maxLength(255), 
+                    Validators.pattern('[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*')
+                ]
+            ],
+        email: ['', 
+                [
+                    Validators.required, 
+                    Validators.email
+                ]
+            ],
+        senha: ['', [
+                    Validators.required,
+                    Validators.pattern('[0-9a-zA-Z$*&@#]*'),
+                    Validators.minLength(6), 
+                    Validators.maxLength(16)
+                ]
+            ]
     });
 
     constructor(private fb: FormBuilder) {
@@ -20,7 +38,7 @@ export class SignUpComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        
+
     }
 
     onSubmit() {
