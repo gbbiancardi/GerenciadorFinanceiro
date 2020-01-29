@@ -8,18 +8,16 @@
         <div class="col align-self-center">
             <div class="container text-center">
 
-                <form [formGroup]="signUp" class="form-signup">
+                <form [formGroup]="signUpForm" class="form-signup">
                     <img class="img-login" src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger">
                     <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
 
                     <div class="form-group">
-                        <input formControlName="nome" class="form-control"
-                            placeholder="Nome Completo" autofocus>
+                        <input formControlName="nome" class="form-control" placeholder="Nome Completo" autofocus>
                     </div>
 
                     <div class="form-group">
-                        <input formControlName="email" class="form-control" placeholder="E-mail"
-                            autofocus>
+                        <input formControlName="email" class="form-control" placeholder="E-mail" autofocus>
                     </div>
 
                     <div class="form-group">
@@ -48,25 +46,25 @@
     <div class="col-4 align-self-center">
         <div class="container text-center">
 
-            <form [formGroup]="signUp" class="form-signup">
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form-signup">
                 <img class="img-login" src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger">
                 <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
 
                 <div class="form-group">
-                    <input formControlName="nome" class="form-control" placeholder="Nome Completo"
-                        autofocus>
+                    <input formControlName="nome" class="form-control" placeholder="Nome Completo" minlength="9" maxlength="55" pattern="[a-zA-Z ]*">
                 </div>
 
                 <div class="form-group">
-                    <input formControlName="email" class="form-control" placeholder="E-mail"
-                        autofocus>
+                    <input type="email" formControlName="email" class="form-control" placeholder="E-mail"
+                        [email]="true">
                 </div>
 
                 <div class="form-group">
                     <input formControlName="senha" type="password" class="form-control" placeholder="Senha">
                 </div>
 
-                <button type="submit" [routerLink]="[ '/dashboard' ]" class="btn btn-primary btn-block">Logar</button>
+                <button (click)="onSubmit()" [disabled]="!signUpForm.valid" type="submit" [routerLink]="[ '/login' ]"
+                    class="btn btn-primary btn-block">Logar</button>
 
             </form>
 

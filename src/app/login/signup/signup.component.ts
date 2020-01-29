@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-signup',
@@ -9,17 +9,26 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 export class SignUpComponent implements OnInit {
 
-    signUp: FormGroup;
-    
-    constructor( ) { 
+    signUpForm = this.fb.group({
+        nome: ['', Validators.required],
+        email: ['', Validators.required],
+        senha: ['', Validators.required]
+    });
+
+    constructor(private fb: FormBuilder) {
 
     }
 
     ngOnInit(): void {
-        this.signUp = new FormGroup({
-            nome: new FormControl(),
-            email: new FormControl(),
-            senha: new FormControl(),
-        });
+        
     }
- }
+
+    onSubmit() {
+        // TODO: Use EventEmitter with form value
+        console.warn(this.signUpForm.value);
+    }
+
+    submitForm() {
+        this.signUpForm.getRawValue;
+    }
+}
