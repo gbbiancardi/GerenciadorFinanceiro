@@ -8,21 +8,41 @@
         <div class="col align-self-center">
             <div class="container text-center">
 
-                <form [formGroup]="signIn" class="form-signin">
+                <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-signin">
                     <img class="img-login" src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger">
                     <h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
                     <div class="form-group">
-                        <input formControlName="email" class="form-control" placeholder="E-mail"
-                            autofocus>
+                        <input type="email" formControlName="email" class="form-control" placeholder="E-mail"
+                            [email]="true"
+                            [ngClass]="{'is-invalid': signInForm.get('email').touched && signInForm.get('email').invalid}">
+                        <div *ngIf="signInForm.get('email').touched && signInForm.get('email').invalid"
+                            class=" invalid-feedback">
+                            <div *ngIf="signInForm.get('email').errors.required">E-mail é obrigatório!</div>
+                            <div *ngIf="signInForm.get('email').errors.email">Digite um e-mail válido!</div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <input formControlName="senha" type="password" class="form-control" placeholder="Senha">
+                    <div class=" form-group">
+                        <input formControlName="senha" type="password" class="form-control" placeholder="Senha"
+                            [ngClass]="{'is-invalid': signInForm.get('senha').touched && signInForm.get('senha').invalid}">
+                        <div *ngIf="signInForm.get('senha').touched && signInForm.get('senha').invalid"
+                            class=" invalid-feedback">
+                            <div *ngIf="signInForm.get('senha').errors.required">Senha é obrigatória!</div>
+                            <div *ngIf="signInForm.get('senha').errors.pattern">Senha deve conter apenas letras, números
+                                e
+                                os caracteres especiais &, @ e #.</div>
+                            <div *ngIf="signInForm.get('senha').errors.minlength">Senha deve ter pelo menos 6
+                                caracteres!
+                            </div>
+                            <div *ngIf="signInForm.get('senha').errors.maxlength">Senha deve ter no máximo 16
+                                caracteres!
+                            </div>
+                        </div>
                     </div>
 
-                    <button type="submit" [routerLink]="[ '/dashboard' ]"
-                        class="btn btn-primary btn-block">Logar</button>
+                    <button (click)="onSubmit()" [disabled]="!signInForm.valid" type="submit"
+                        [routerLink]="[ '/dashboard' ]" class="btn btn-primary btn-block">Logar</button>
 
                 </form>
 
@@ -43,20 +63,37 @@
     <div class="col-4 align-self-center">
         <div class="container text-center">
 
-            <form [formGroup]="signIn" class="form-signin">
+            <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="form-signin">
                 <img class="img-login" src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger">
                 <h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
                 <div class="form-group">
-                    <input formControlName="email" class="form-control" placeholder="E-mail"
-                        autofocus>
+                    <input type="email" formControlName="email" class="form-control" placeholder="E-mail" [email]="true"
+                        [ngClass]="{'is-invalid': signInForm.get('email').touched && signInForm.get('email').invalid}">
+                    <div *ngIf="signInForm.get('email').touched && signInForm.get('email').invalid"
+                        class=" invalid-feedback">
+                        <div *ngIf="signInForm.get('email').errors.required">E-mail é obrigatório!</div>
+                        <div *ngIf="signInForm.get('email').errors.email">Digite um e-mail válido!</div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <input formControlName="senha" type="password" class="form-control" placeholder="Senha">
+                <div class=" form-group">
+                    <input formControlName="senha" type="password" class="form-control" placeholder="Senha"
+                        [ngClass]="{'is-invalid': signInForm.get('senha').touched && signInForm.get('senha').invalid}">
+                    <div *ngIf="signInForm.get('senha').touched && signInForm.get('senha').invalid"
+                        class=" invalid-feedback">
+                        <div *ngIf="signInForm.get('senha').errors.required">Senha é obrigatória!</div>
+                        <div *ngIf="signInForm.get('senha').errors.pattern">Senha deve conter apenas letras, números e
+                            os caracteres especiais &, @ e #.</div>
+                        <div *ngIf="signInForm.get('senha').errors.minlength">Senha deve ter pelo menos 6 caracteres!
+                        </div>
+                        <div *ngIf="signInForm.get('senha').errors.maxlength">Senha deve ter no máximo 16 caracteres!
+                        </div>
+                    </div>
                 </div>
 
-                <button type="submit" [routerLink]="[ '/dashboard' ]" class="btn btn-primary btn-block">Logar</button>
+                <button (click)="onSubmit()" [disabled]="!signInForm.valid" type="submit"
+                    [routerLink]="[ '/dashboard' ]" class="btn btn-primary btn-block">Logar</button>
 
             </form>
 
