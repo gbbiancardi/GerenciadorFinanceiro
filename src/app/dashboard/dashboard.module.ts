@@ -10,7 +10,7 @@ import { ObjetivoComponent } from './objetivo/objetivo.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { SuporteComponent } from './suporte/suporte.component';
 import { GraficoComponent } from './grafico/grafico.component';
-import { DashboardRoutingModule } from './dashboard-routing.module';
+import { DashboardRoutingModule } from './dashboard.routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { CoreModule } from '../core/core.module';
 
