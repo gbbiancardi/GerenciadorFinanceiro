@@ -6,6 +6,7 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 const routes: Routes = [
     {
       path: '',
+      pathMatch: 'full',
       component: HomeComponent,
       data: {
         title: 'Moneyger - Seu Sistema de Gerenciamento Financeiro'

@@ -7,8 +7,8 @@ import { SignInComponent } from './signin/signin.component';
 import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login.routing.module';
 import { SignUpComponent } from './signup/signup.component';
-import { SignUpService } from './signup/signup.service';
 import { VMessageModule } from '../shared/components/vmessage/vmessage.module';
+import { SignUpService } from './signup/signup.service';
 
 @NgModule({
   declarations: [

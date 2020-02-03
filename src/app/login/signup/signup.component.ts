@@ -1,52 +1,72 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validator';
+import { UserNotTakenValidatorService } from './user-not-taken.validator.service';
+import { NewUser } from './new-user';
+import { SignUpService } from './signup.service';
+import { error } from 'util';
+import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
 
 @Component({
     selector: 'app-signup',
     templateUrl: './signup.component.html',
-    styleUrls: ['./signup.component.css']
+    styleUrls: ['./signup.component.css'],
+    providers: [UserNotTakenValidatorService]
 })
 
 export class SignUpComponent implements OnInit {
 
-    signUpForm = this.fb.group({
-        nome: ['', 
-                [
-                    Validators.required, 
-                    Validators.minLength(6), 
-                    Validators.maxLength(255), 
-                    Validators.pattern('[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]*')
-                ]
-            ],
-        email: ['', 
-                [
-                    Validators.required, 
-                    Validators.email
-                ]
-            ],
-        senha: ['', [
-                    Validators.required,
-                    Validators.pattern('[0-9a-zA-Z$*&@#]*'),
-                    Validators.minLength(6), 
-                    Validators.maxLength(16)
-                ]
-            ]
-    });
+    signupForm: FormGroup;
+    @ViewChild('emailInput', { static: true }) emailInput: ElementRef<HTMLInputElement>;
 
-    constructor(private fb: FormBuilder) {
-
-    }
+    constructor(
+        private formBuilder: FormBuilder,
+        private userNotTakenValidatorService: UserNotTakenValidatorService,
+        private signUpService: SignUpService,
+        private router: Router,
+        private platformDetectorService: PlatformDetectorService
+    ) { }
 
     ngOnInit(): void {
+        this.signupForm = this.formBuilder.group({
+            nome: ['',
+                [
+                    Validators.required,
+                    Validators.minLength(2),
+                    Validators.maxLength(30)
+                ]
+            ],
+            email: ['',
+                [
+                    Validators.required,
+                    lowerCaseValidator,
+                    Validators.email
+                ],
+                this.userNotTakenValidatorService.checkUserNameTaken()
+            ],
+            senha: ['',
+                [
+                    Validators.required,
+                    Validators.minLength(8),
+                    Validators.maxLength(18)
+                ]
+            ]
+        });
 
+        this.platformDetectorService.isPlatformBrowser() &&
+            this.emailInput.nativeElement.focus();
     }
 
-    onSubmit() {
-        // TODO: Use EventEmitter with form value
-        console.warn(this.signUpForm.value);
-    }
+    signup() {
 
-    submitForm() {
-        this.signUpForm.getRawValue;
+        const newUser = this.signupForm.getRawValue() as NewUser;
+        this.signUpService
+            .signup(newUser)
+            .subscribe(
+                () => this.router.navigate(['']),
+                err => console.log(error)
+            );
     }
 }
