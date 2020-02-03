@@ -12,7 +12,7 @@ import { PlatformDetectorService } from 'src/app/core/platform/platform-detector
 
 export class SignInComponent implements OnInit {
 
-    @ViewChild('userNameInput', { static: true }) userNameInput: ElementRef<HTMLInputElement>;
+    @ViewChild('emailInput', { static: true }) emailInput: ElementRef<HTMLInputElement>;
 
     signInForm = this.fb.group({
         email: ['',
@@ -39,7 +39,7 @@ export class SignInComponent implements OnInit {
 
     ngOnInit(): void {
         this.platformDetectorService.isPlatformBrowser() &&
-            this.userNameInput.nativeElement.focus();
+            this.emailInput.nativeElement.focus();
     }
 
     login() {
@@ -55,19 +55,19 @@ export class SignInComponent implements OnInit {
                     console.log(err);
                     this.signInForm.reset();
                     this.platformDetectorService.isPlatformBrowser() &&
-                        this.userNameInput.nativeElement.focus();
-                    alert('Invalid username password');
+                        this.emailInput.nativeElement.focus();
+                    alert('Email ou Senha invalidos!');
                 }
             );
     }
 
-    onSubmit() {
-        // TODO: Use EventEmitter with form value
-        console.warn(this.signInForm.value);
-    }
+    // onSubmit() {
+    //     // TODO: Use EventEmitter with form value
+    //     console.warn(this.signInForm.value);
+    // }
 
-    submitForm() {
-        this.signInForm.getRawValue;
-    }
+    // submitForm() {
+    //     this.signInForm.getRawValue;
+    // }
 
 }

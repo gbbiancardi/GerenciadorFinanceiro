@@ -34,8 +34,8 @@ export class SignUpComponent implements OnInit {
             nome: ['',
                 [
                     Validators.required,
-                    Validators.minLength(2),
-                    Validators.maxLength(30)
+                    Validators.minLength(7),
+                    Validators.maxLength(50)
                 ]
             ],
             email: ['',

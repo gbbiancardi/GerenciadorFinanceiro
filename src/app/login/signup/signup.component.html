@@ -1,4 +1,4 @@
-<!-- <div class="row-login-mobile">
+<div class="row-login-mobile">
     <div class="row">
         <div class="col coluna-esquerda-login text-center">
             <img class="mt-5 login-img img-fluid" src="../../assets/img/img-sessao01.png" alt="Imagem Login">
@@ -8,52 +8,43 @@
         <div class="col align-self-center">
             <div class="container text-center">
 
-                <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form-signup">
+                <form [formGroup]="signupForm" (submit)="signup()" class="form-signup">
                     <img class="img-login" src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger">
                     <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
-    
+
                     <div class="form-group">
-                        <input formControlName="nome" class="form-control" placeholder="Nome Completo"
-                            [ngClass]="{'is-invalid': signupForm.get('nome').touched && signupForm.get('nome').invalid}">
-                        <div *ngIf="signupForm.get('nome').touched && signupForm.get('nome').invalid"
-                            class="invalid-feedback">
-                            <div *ngIf="signupForm.get('nome').errors.required">Nome é obrigatório!</div>
-                            <div *ngIf="signupForm.get('nome').errors.minlength">Nome deve ter pelo menos 9 caracteres!
-                            </div>
-                            <div *ngIf="signupForm.get('nome').errors.maxlength">Nome deve ter no máximo 255 caracteres!
-                            </div>
-                            <div *ngIf="signupForm.get('nome').errors.pattern">Nome deve conter caracteres válidos!</div>
-                        </div>
+                        <input formControlName="nome" placeholder="Nome Completo" class="form-control">
+                        <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.required"
+                            text="Nome Completo é obrigatório!">
+                        </ap-vmessage>
+                        <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.minlength" text="Mínimo de 7 caracteres!">
+                        </ap-vmessage>
+                        <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.maxlength" text="Máximo de 50 caracteres!">
+                        </ap-vmessage>
                     </div>
-    
+
                     <div class="form-group">
-                        <input type="email" formControlName="email" class="form-control" placeholder="E-mail" [email]="true"
-                            [ngClass]="{'is-invalid': signupForm.get('email').touched && signupForm.get('email').invalid}">
-                        <div *ngIf="signupForm.get('email').touched && signupForm.get('email').invalid"
-                            class=" invalid-feedback">
-                            <div *ngIf="signupForm.get('email').errors.required">E-mail é obrigatório!</div>
-                            <div *ngIf="signupForm.get('email').errors.email">Digite um e-mail válido!</div>
-                        </div>
+                        <input #emailInput formControlName="email" placeholder="email" class="form-control" autofocus>
+                        <ap-vmessage *ngIf="!!signupForm.get('email').errors?.required" text="Email é obrigatório!">
+                        </ap-vmessage>
+                        <ap-vmessage *ngIf="!!signupForm.get('email').errors?.email" text="Email inválido!">
+                        </ap-vmessage>
                     </div>
-    
-                    <div class=" form-group">
-                        <input formControlName="senha" type="password" class="form-control" placeholder="Senha"
-                            [ngClass]="{'is-invalid': signupForm.get('senha').touched && signupForm.get('senha').invalid}">
-                        <div *ngIf="signupForm.get('senha').touched && signupForm.get('senha').invalid"
-                            class=" invalid-feedback">
-                            <div *ngIf="signupForm.get('senha').errors.required">Senha é obrigatória!</div>
-                            <div *ngIf="signupForm.get('senha').errors.pattern">Senha deve conter apenas letras, números e
-                                os caracteres especiais &, @ e #.</div>
-                            <div *ngIf="signupForm.get('senha').errors.minlength">Senha deve ter pelo menos 6 caracteres!
-                            </div>
-                            <div *ngIf="signupForm.get('senha').errors.maxlength">Senha deve ter no máximo 16 caracteres!
-                            </div>
-                        </div>
+
+                    <div class="form-group">
+                        <input formControlName="senha" type="password" placeholder="Senha" class="form-control">
+                        <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.required" text="Senha é obrigatória!">
+                        </ap-vmessage>
+                        <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.minlength" text="Minimo de 8 caracteres!">
+                        </ap-vmessage>
+                        <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.maxlength"
+                            text="Maximo de 18 caracteres!">
+                        </ap-vmessage>
                     </div>
-    
-                    <button (click)="onSubmit()" [disabled]="!signupForm.valid" type="submit" [routerLink]="[ '/login' ]"
-                        class="btn btn-primary btn-block">Logar</button>
-    
+
+                    <button [disabled]="signupForm.valid || signupForm.pending"
+                        class="btn btn-primary btn-block">Cadastrar</button>
+
                 </form>
 
                 <a class="btn btn-light" [routerLink]="[ '/' ]">Voltar para a Home</a>
@@ -63,7 +54,7 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <div class="row row-login-desktop">
     <div class="col-8 coluna-esquerda-login text-center">
@@ -78,35 +69,35 @@
                 <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
 
                 <div class="form-group">
-                    <input formControlName="nome" placeholder="Nome" class="form-control">
-                    <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.required" text="Full name is required!">
+                    <input formControlName="nome" placeholder="Nome Completo" class="form-control">
+                    <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.required" text="Nome Completo é obrigatório!">
                     </ap-vmessage>
-                    <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.minlength" text="Miminum length is 2!">
+                    <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.minlength" text="Mínimo de 7 caracteres!">
                     </ap-vmessage>
-                    <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.maxlength" text="Maximun length is 30!">
+                    <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.maxlength" text="Máximo de 50 caracteres!">
                     </ap-vmessage>
                 </div>
 
                 <div class="form-group">
                     <input #emailInput formControlName="email" placeholder="email" class="form-control" autofocus>
-                    <ap-vmessage *ngIf="!!signupForm.get('email').errors?.required" text="Email is required!">
+                    <ap-vmessage *ngIf="!!signupForm.get('email').errors?.required" text="Email é obrigatório!">
                     </ap-vmessage>
-                    <ap-vmessage *ngIf="!!signupForm.get('email').errors?.email" text="Invalid e-mail!">
+                    <ap-vmessage *ngIf="!!signupForm.get('email').errors?.email" text="Email inválido!">
                     </ap-vmessage>
                 </div>
 
-                <div class=" form-group">
+                <div class="form-group">
                     <input formControlName="senha" type="password" placeholder="Senha" class="form-control">
-                    <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.required" text="Password is required!">
+                    <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.required" text="Senha é obrigatória!">
                     </ap-vmessage>
-                    <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.minlength" text="Miminum length is 8!">
+                    <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.minlength" text="Minimo de 8 caracteres!">
                     </ap-vmessage>
-                    <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.maxlength" text="Maximun length is 18!">
+                    <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.maxlength" text="Maximo de 18 caracteres!">
                     </ap-vmessage>
                 </div>
 
-                <button [disabled]="signupForm.valid || signupForm.pending" 
-                    class="btn btn-primary btn-block">Logar</button>
+                <button [disabled]="signupForm.valid || signupForm.pending"
+                    class="btn btn-primary btn-block">Cadastrar</button>
 
             </form>
 
