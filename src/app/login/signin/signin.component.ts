@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/core/auth/auth.service';
 import { Router } from '@angular/router';
+
+import { AuthService } from 'src/app/core/auth/auth.service';
 import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
 
 @Component({
@@ -23,9 +24,8 @@ export class SignInComponent implements OnInit {
         ],
         senha: ['', [
             Validators.required,
-            Validators.pattern('[0-9a-zA-Z$*&@#]*'),
-            Validators.minLength(6),
-            Validators.maxLength(16)
+            Validators.minLength(8),
+            Validators.maxLength(18)
         ]
         ]
     });
@@ -50,7 +50,7 @@ export class SignInComponent implements OnInit {
         this.authService
             .authenticate(email, senha)
             .subscribe(
-                () => this.router.navigate(['user', email]),
+                () => this.router.navigate(['users', email]),
                 err => {
                     console.log(err);
                     this.signInForm.reset();

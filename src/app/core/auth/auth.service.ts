@@ -15,18 +15,18 @@ export class AuthService {
     private userService: UserService
     ) { }
 
-  authenticate(userName: string, password: string) {
+  authenticate(email: string, senha: string) {
 
     return this.http
       .post(
         API_URL + '/users', 
-        { userName, password }, 
+        { email, senha }, 
         {observe: 'response'}
       )
       .pipe(tap(res => {
         const authToken = res.headers.get('x-access-token');
         this.userService.setToken(authToken);
-        console.log(`User ${userName} authenticated with token ${authToken}`)
+        console.log(`User ${email} authenticated with token ${authToken}`)
       }))
   }
 }
