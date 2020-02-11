@@ -10,7 +10,7 @@ export class SignInService {
     constructor(private http: HttpClient) { }
 
     signin(email: String) {
-        
-        return this.http.get(API_URL + '/api/users/' + email);
+
+        return this.http.get(API_URL + '/users/' + email);
     }
 }

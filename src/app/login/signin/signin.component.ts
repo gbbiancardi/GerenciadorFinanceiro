@@ -48,23 +48,23 @@ export class SignInComponent implements OnInit {
     login() {
 
         const email = this.signInForm.get('email').value;
-        const senha = this.signInForm.get('senha').value;
+        // const senha = this.signInForm.get('senha').value;
 
-        // this.signInService.signin(email).subscribe(
-        //     () => this.router.navigate(['dashboard']))
-        // }
-    this.authService
-        .authenticate(email, senha)
-        .subscribe(
-            () => this.router.navigate(['dashboard']),
-            err => {
-                console.log(err);
-                this.signInForm.reset();
-                this.platformDetectorService.isPlatformBrowser() &&
-                    this.emailInput.nativeElement.focus();
-                alert('Email ou Senha invalidos!');
-            }
-        );
+        this.signInService.signin(email).subscribe(
+            () => this.router.navigate(['dashboard']))
+        }
+    // this.authService
+    //     .authenticate(email, senha)
+    //     .subscribe(
+    //         () => this.router.navigate(['dashboard']),
+    //         err => {
+    //             console.log(err);
+    //             this.signInForm.reset();
+    //             this.platformDetectorService.isPlatformBrowser() &&
+    //                 this.emailInput.nativeElement.focus();
+    //             alert('Email ou Senha invalidos!');
+    //         }
+    //     );
     }
 
     // onSubmit() {
@@ -76,4 +76,4 @@ export class SignInComponent implements OnInit {
     //     this.signInForm.getRawValue;
     // }
 
-}
+// }
