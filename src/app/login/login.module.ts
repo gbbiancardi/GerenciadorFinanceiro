@@ -9,6 +9,7 @@ import { LoginRoutingModule } from './login.routing.module';
 import { SignUpComponent } from './signup/signup.component';
 import { VMessageModule } from '../shared/components/vmessage/vmessage.module';
 import { SignUpService } from './signup/signup.service';
+import { SignInService } from './signin/signin.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SignUpService } from './signup/signup.service';
     LoginRoutingModule
   ],
   providers: [
-    SignUpService
+    SignUpService,
+    SignInService
   ]
 })
 export class LoginModule { }

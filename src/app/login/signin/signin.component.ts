@@ -2,8 +2,10 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AuthService } from 'src/app/core/auth/auth.service';
+// import { AuthService } from 'src/app/core/auth/auth.service';
 import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
+import { SignInService } from './signin.service';
+import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
     selector: 'app-signin',
@@ -33,6 +35,7 @@ export class SignInComponent implements OnInit {
     constructor(
         private fb: FormBuilder,
         private authService: AuthService,
+        private signInService: SignInService,
         private router: Router,
         private platformDetectorService: PlatformDetectorService
     ) { }
@@ -47,18 +50,21 @@ export class SignInComponent implements OnInit {
         const email = this.signInForm.get('email').value;
         const senha = this.signInForm.get('senha').value;
 
-        this.authService
-            .authenticate(email, senha)
-            .subscribe(
-                () => this.router.navigate(['users', email]),
-                err => {
-                    console.log(err);
-                    this.signInForm.reset();
-                    this.platformDetectorService.isPlatformBrowser() &&
-                        this.emailInput.nativeElement.focus();
-                    alert('Email ou Senha invalidos!');
-                }
-            );
+        // this.signInService.signin(email).subscribe(
+        //     () => this.router.navigate(['dashboard']))
+        // }
+    this.authService
+        .authenticate(email, senha)
+        .subscribe(
+            () => this.router.navigate(['dashboard']),
+            err => {
+                console.log(err);
+                this.signInForm.reset();
+                this.platformDetectorService.isPlatformBrowser() &&
+                    this.emailInput.nativeElement.focus();
+                alert('Email ou Senha invalidos!');
+            }
+        );
     }
 
     // onSubmit() {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { switchMap, filter, map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ export class AppComponent {
   constructor(
     private router: Router, 
     private activatedRoute: ActivatedRoute, 
-    private titleService: Title
+    private titleService: Title,
+    private http : HttpClient
   ) { }
 
   ngOnInit(): void {
@@ -26,6 +28,14 @@ export class AppComponent {
       }))
       .pipe(switchMap(route => route.data))
       .subscribe(event => this.titleService.setTitle(event.title));
+  }
+
+  public ping() {
+    this.http.get('http://localhost:8080/users/')
+      .subscribe(
+        data => console.log(data),
+        err => console.log(err)
+      );
   }
 
 }
