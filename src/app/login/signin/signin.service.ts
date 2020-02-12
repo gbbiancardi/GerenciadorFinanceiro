@@ -9,8 +9,13 @@ export class SignInService {
 
     constructor(private http: HttpClient) { }
 
-    signin(email: String) {
+    signinEmail(email: String) {
 
         return this.http.get(API_URL + '/users/' + email);
+    }
+
+    signinSenha(senha: String) {
+
+        return this.http.get(API_URL + '/users/' + senha);
     }
 }
