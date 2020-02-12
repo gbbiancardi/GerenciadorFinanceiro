@@ -4,13 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignInComponent } from './signin/signin.component';
 import { LoginComponent } from './login.component';
 import { SignUpComponent } from './signup/signup.component';
-import { AuthGuard } from '../core/auth/auth.guard';
+import { LoginGuard } from '../core/auth/login.guard';
 
 const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent,
-        // canActivate: [AuthGuard],
+        canActivate: [LoginGuard],
         data: {
             title: 'Moneyger - Login'
         },

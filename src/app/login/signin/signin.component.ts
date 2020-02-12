@@ -51,8 +51,16 @@ export class SignInComponent implements OnInit {
         // const senha = this.signInForm.get('senha').value;
 
         this.signInService.signin(email).subscribe(
-            () => this.router.navigate(['dashboard']))
-        }
+            () => this.router.navigate(['dashboard']),
+            err => {
+                console.log(err);
+                this.signInForm.reset();
+                this.platformDetectorService.isPlatformBrowser() &&
+                    this.emailInput.nativeElement.focus();
+                alert('Email ou Senha invalidos!');
+            }
+        );
+    }
     // this.authService
     //     .authenticate(email, senha)
     //     .subscribe(
@@ -65,7 +73,7 @@ export class SignInComponent implements OnInit {
     //             alert('Email ou Senha invalidos!');
     //         }
     //     );
-    }
+    // }
 
     // onSubmit() {
     //     // TODO: Use EventEmitter with form value
@@ -76,4 +84,4 @@ export class SignInComponent implements OnInit {
     //     this.signInForm.getRawValue;
     // }
 
-// }
+}
