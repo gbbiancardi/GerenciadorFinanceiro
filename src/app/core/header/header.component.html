@@ -20,10 +20,14 @@
         </li>
     </ul>
     <div class="dropdown div-dropdown">
-        <button class="btn btn-light botao-dropdown dropdown-toggle" type="button" id="dropdownMenu2"
+        <!-- <button class="btn btn-light botao-dropdown dropdown-toggle" type="button" id="dropdownMenu2"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
             *ngIf="(user$ | async) as user; else login">
             {{ user.nome }}
+        </button> -->
+        <button class="btn btn-light botao-dropdown dropdown-toggle" type="button" id="dropdownMenu2"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Breno Rodrigues Quadros
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <a class="dropdown-item" type="button" [routerLink]="[ '/dashboard/perfil' ]">Editar Perfil</a>
