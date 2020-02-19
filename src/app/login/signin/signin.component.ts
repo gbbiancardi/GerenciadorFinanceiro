@@ -56,7 +56,7 @@ export class SignInComponent implements OnInit {
                 this.signInForm.reset();
                 this.platformDetectorService.isPlatformBrowser() &&
                     this.emailInput.nativeElement.focus();
-                alert('E-mail inválido!');
+                alert('E-mail ou Senha inválido!');
             }
         );
     }
