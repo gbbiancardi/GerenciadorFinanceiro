@@ -8,44 +8,51 @@
         <div class="col align-self-center">
             <div class="container text-center">
 
-                <form [formGroup]="signupForm" (submit)="signup()" class="form-signup">
-                    <img class="img-login" src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger">
+                <form [formGroup]="signupForm" (submit)="signup()" class="form form-signup mt-4">
                     <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
-
+    
                     <div class="form-group">
-                        <input formControlName="nome" placeholder="Nome Completo" class="form-control">
-                        <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.required"
-                            text="Nome Completo é obrigatório!">
+                        <input formControlName="nome" placeholder="Nome Completo" class="form-control" autofocus>
+                        <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.required" text="Nome Completo é obrigatório!">
                         </ap-vmessage>
                         <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.minlength" text="Mínimo de 7 caracteres!">
                         </ap-vmessage>
                         <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.maxlength" text="Máximo de 50 caracteres!">
                         </ap-vmessage>
                     </div>
-
+    
                     <div class="form-group">
-                        <input #emailInput formControlName="email" placeholder="E-mail" class="form-control" autofocus>
+                        <input #emailInput formControlName="email" placeholder="E-mail" class="form-control">
                         <ap-vmessage *ngIf="!!signupForm.get('email').errors?.required" text="E-mail é obrigatório!">
                         </ap-vmessage>
                         <ap-vmessage *ngIf="!!signupForm.get('email').errors?.email" text="E-mail inválido!">
                         </ap-vmessage>
                     </div>
-
+    
                     <div class="form-group">
                         <input formControlName="senha" type="password" placeholder="Senha" class="form-control">
                         <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.required" text="Senha é obrigatória!">
                         </ap-vmessage>
                         <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.minlength" text="Minimo de 8 caracteres!">
                         </ap-vmessage>
-                        <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.maxlength"
-                            text="Maximo de 18 caracteres!">
+                        <ap-vmessage *ngIf="!!signupForm.get('senha').errors?.maxlength" text="Maximo de 18 caracteres!">
                         </ap-vmessage>
                     </div>
-
-                    <button [disabled]="signupForm.valid || signupForm.pending"
+    
+                    <div class="form-group">
+                        <input formControlName="confirmSenha" type="password" placeholder="Confirme sua Senha"
+                            class="form-control">
+                        <ap-vmessage *ngIf="!!signupForm.get('confirmSenha').errors?.required" text="Campo obrigatório!">
+                        </ap-vmessage>
+                        <ap-vmessage *ngIf="!!signupForm.errors?.invalid"
+                            text="Valor diferente da Senha!">
+                        </ap-vmessage>
+                    </div>
+    
+                    <button [disabled]="signupForm.invalid" type="submit"
                         class="btn btn-primary btn-block">Cadastrar</button>
-
                 </form>
+    
 
                 <a class="btn btn-light" [routerLink]="[ '/' ]">Voltar para a Home</a>
                 <p>Já é cadastrado? <a [routerLink]="['/login']">Faça login!</a></p>
@@ -64,12 +71,12 @@
     <div class="col-4 align-self-center">
         <div class="container text-center">
 
-            <form [formGroup]="signupForm" (submit)="signup()" class="form-signup">
-                <img class="img-login" src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger">
+            <form [formGroup]="signupForm" (submit)="signup()" class="form form-signup">
+                <!-- <img class="img-login" src="../../../assets/img/moneyger-logo.png" alt="Logo Moneyger"> -->
                 <h1 class="h3 mb-3 font-weight-normal">Cadastre-se</h1>
 
                 <div class="form-group">
-                    <input formControlName="nome" placeholder="Nome Completo" class="form-control">
+                    <input formControlName="nome" placeholder="Nome Completo" class="form-control" autofocus>
                     <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.required" text="Nome Completo é obrigatório!">
                     </ap-vmessage>
                     <ap-vmessage *ngIf="!!signupForm.get('nome').errors?.minlength" text="Mínimo de 7 caracteres!">
@@ -79,7 +86,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input #emailInput formControlName="email" placeholder="E-mail" class="form-control" autofocus>
+                    <input #emailInput formControlName="email" placeholder="E-mail" class="form-control">
                     <ap-vmessage *ngIf="!!signupForm.get('email').errors?.required" text="E-mail é obrigatório!">
                     </ap-vmessage>
                     <ap-vmessage *ngIf="!!signupForm.get('email').errors?.email" text="E-mail inválido!">
@@ -96,9 +103,18 @@
                     </ap-vmessage>
                 </div>
 
-                <button [disabled]="signupForm.valid || signupForm.pending"
-                    class="btn btn-primary btn-block">Cadastrar</button>
+                <div class="form-group">
+                    <input formControlName="confirmSenha" type="password" placeholder="Confirme sua Senha"
+                        class="form-control">
+                    <ap-vmessage *ngIf="!!signupForm.get('confirmSenha').errors?.required" text="Campo obrigatório!">
+                    </ap-vmessage>
+                    <ap-vmessage *ngIf="!!signupForm.errors?.invalid"
+                        text="Valor diferente da Senha!">
+                    </ap-vmessage>
+                </div>
 
+                <button [disabled]="signupForm.invalid" type="submit"
+                    class="btn btn-primary btn-block">Cadastrar</button>
             </form>
 
             <a class="btn btn-light" [routerLink]="[ '/' ]">Voltar para a Home</a>
