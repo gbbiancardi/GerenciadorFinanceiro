@@ -47,9 +47,9 @@ export class SignInComponent implements OnInit {
     login() {
 
         const email = this.signInForm.get('email').value;
-        // const senha = this.signInForm.get('senha').value;
+        const senha = this.signInForm.get('senha').value;
 
-        this.signInService.signinEmail(email).subscribe(
+        this.signInService.login(email,senha).subscribe(
             () => this.router.navigate(['dashboard']),
             err => {
                 console.log(err);
