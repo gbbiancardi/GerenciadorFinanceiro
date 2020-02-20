@@ -70,6 +70,10 @@ section {
     color: #4713b8;
 }
 
+.mobile-footer {
+    display: none;
+}
+
 footer {
     padding-left: 7.5em;
     background-color: #6727F2;
@@ -83,6 +87,14 @@ footer {
     }
 
     .navbar-mobile {
+        display: block;
+    }
+
+    .desktop-footer {
+        display: none;
+    }
+
+    .mobile-footer {
         display: block;
     }
 

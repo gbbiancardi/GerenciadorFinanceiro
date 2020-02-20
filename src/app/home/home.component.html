@@ -32,8 +32,8 @@
       </div>
       <div class="col-5 align-self-center">
         <div class="dropdown div-dropdown">
-          <button class="btn btn-light" type="button" id="dropdownMenu2" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
+          <button class="btn btn-light" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             <img class="m-1" src="../../assets/icon/menu.svg" alt="Menu" width="15px">
           </button>
           <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left" aria-labelledby="dropdownMenu2">
@@ -75,23 +75,23 @@
       <div class="row justify-content-center pt-3">
         <div class="col-sm-2 d-inline-block mx-3 text-center">
           <img class="mb-2 img-fluid" src="../assets/img/icons/goal.png" alt="Img" width="140px">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h3>Objetividade</h3>
+          <p>Saiba exatamente como andam suas transações.</p>
         </div>
         <div class="col-sm-2 d-inline-block mx-3 text-center">
           <img class="mb-2 img-fluid" src="../assets/img/icons/money.png" alt="Img" width="140px">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h3>Facilidade</h3>
+          <p>Visualize facilmente sua tragetória até seu objetivo.</p>
         </div>
         <div class="col-sm-2 d-inline-block mx-3 text-center">
           <img class="mb-2 img-fluid" src="../assets/img/icons/payment.png" alt="Img" width="140px">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h3>Segurança</h3>
+          <p>Tenha todos os seus dados em um ambiente seguro.</p>
         </div>
         <div class="col-sm-2 d-inline-block mx-3 text-center">
           <img class="mb-2 img-fluid" src="../assets/img/icons/money_goal.png" alt="Img" width="140px">
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h3>Controle</h3>
+          <p>Alcance seu objetivo com total facilidade e controle.</p>
         </div>
       </div>
     </section>
@@ -106,7 +106,7 @@
           <img class="img-fluid img-sessao-03" src="../assets/img/icons/mountains.png" alt="Img">
         </div>
         <div class="col-md-10 align-self-center">
-          <h3>Lorem Ipsum</h3>
+          <h3>Estabeleça o Objetivo</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga,
             quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt
             facilis consequatur labore?</p>
@@ -114,7 +114,7 @@
       </div>
       <div class="row justify-content-center pt-3 mx-5">
         <div class="col-md-10 align-self-center">
-          <h3>Lorem Ipsum</h3>
+          <h3>Poupe seu Dinheiro</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga,
             quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt
             facilis consequatur labore?</p>
@@ -128,7 +128,7 @@
           <img class="img-fluid img-sessao-03" src="../assets/img/icons/overcome.png" alt="Img">
         </div>
         <div class="col-md-10 align-self-center">
-          <h3>Lorem Ipsum</h3>
+          <h3>Alcance seu Objetivo</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis reprehenderit culpa corrupti fuga,
             quaerat id blanditiis, magnam veniam aliquid odio cupiditate perspiciatis sunt eum minus dolorem incidunt
             facilis consequatur labore?</p>
@@ -147,7 +147,7 @@
             <h2 class="mb-0">
               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                 aria-expanded="true" aria-controls="collapseOne">
-                Collapsible Group Item #1
+                O que preciso para criar minha conta?
               </button>
             </h2>
           </div>
@@ -168,7 +168,7 @@
             <h2 class="mb-0">
               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="false" aria-controls="collapseTwo">
-                Collapsible Group Item #2
+                Como que consigo inserir meu objetivo?
               </button>
             </h2>
           </div>
@@ -188,7 +188,7 @@
             <h2 class="mb-0">
               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
                 aria-expanded="false" aria-controls="collapseThree">
-                Collapsible Group Item #3
+                Posso me cadastrar como Pessoa Jurídica?
               </button>
             </h2>
           </div>
@@ -207,52 +207,71 @@
 
     </section>
 
-    <footer class="py-5">
+    <footer class="mobile-footer py-5">
       <div class="row px-0 mx-0">
-        <div class="col-12 col-md">
+        <div class="col">
+          <h5>Moneyger</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-white" href="#sobre">Sobre Nós</a></li>
+            <li><a class="text-white" href="#como-funciona">Como Funciona</a></li>
+            <li><a class="text-white" [routerLink]="[ '/login/cadastro' ]">Cadastre-se</a></li>
+            <li><a class="text-white" [routerLink]="[ '/login' ]">Login</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h5>Social</h5>
+          <a class="mr-2" href="#">
+            <img src="../../assets/icon/facebook.svg" width="25" height="25" alt="Facebook">
+          </a>
+          <a class="mr-2" href="#">
+            <img src="../../assets/icon/instagram.svg" width="25" height="25" alt="Instagram">
+          </a>
+          <a href="#">
+            <img src="../../assets/icon/linkedin.svg" width="25" height="25" alt="LinkedIn">
+          </a>
+        </div>
+      </div>
+      <div class="row px-0 mx-0 mt-3">
+        <div class="col">
+
           <img src="../assets/img/moneyger-logo-white.png" width="24" height="24" fill="none" stroke="currentColor"
-            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
-            viewBox="0 0 24 24" focusable="false">
-          <title>Product</title>
-          <small class="d-block mb-3 text-white">© 2020</small>
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mb-2" role="img" viewBox="0 0 24 24"
+            focusable="false">
+          <title>Moneyger</title>
+          <small class="mb-3 ml-2 text-white align-middle">© 2020</small>
         </div>
-        <div class="col-6 col-md">
-          <h5>Features</h5>
+      </div>
+    </footer>
+
+    <footer class="desktop-footer py-5">
+      <div class="row px-0 mx-0">
+        <div class="col">
+          <h5>Moneyger</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-white" href="#">Cool stuff</a></li>
-            <li><a class="text-white" href="#">Random feature</a></li>
-            <li><a class="text-white" href="#">Team feature</a></li>
-            <li><a class="text-white" href="#">Stuff for developers</a></li>
-            <li><a class="text-white" href="#">Another one</a></li>
-            <li><a class="text-white" href="#">Last time</a></li>
+            <li><a class="text-white" href="#sobre">Sobre Nós</a></li>
+            <li><a class="text-white" href="#como-funciona">Como Funciona</a></li>
+            <li><a class="text-white" [routerLink]="[ '/login/cadastro' ]">Cadastre-se</a></li>
+            <li><a class="text-white" [routerLink]="[ '/login' ]">Login</a></li>
           </ul>
         </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-white" href="#">Resource</a></li>
-            <li><a class="text-white" href="#">Resource name</a></li>
-            <li><a class="text-white" href="#">Another resource</a></li>
-            <li><a class="text-white" href="#">Final resource</a></li>
-          </ul>
+        <div class="col-8">
+          <h5>Social</h5>
+          <a class="mr-2" href="#">
+            <img src="../../assets/icon/facebook.svg" width="25" height="25" alt="Facebook">
+          </a>
+          <a class="mr-2" href="#">
+            <img src="../../assets/icon/instagram.svg" width="25" height="25" alt="Instagram">
+          </a>
+          <a href="#">
+            <img src="../../assets/icon/linkedin.svg" width="25" height="25" alt="LinkedIn">
+          </a>
         </div>
-        <div class="col-6 col-md">
-          <h5>Resources</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-white" href="#">Business</a></li>
-            <li><a class="text-white" href="#">Education</a></li>
-            <li><a class="text-white" href="#">Government</a></li>
-            <li><a class="text-white" href="#">Gaming</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5>About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-white" href="#">Team</a></li>
-            <li><a class="text-white" href="#">Locations</a></li>
-            <li><a class="text-white" href="#">Privacy</a></li>
-            <li><a class="text-white" href="#">Terms</a></li>
-          </ul>
+        <div class="col">
+          <img src="../assets/img/moneyger-logo-white.png" width="24" height="24" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mb-2" role="img" viewBox="0 0 24 24"
+            focusable="false">
+          <title>Moneyger</title>
+          <small class="mb-3 ml-2 text-white align-middle">© 2020</small>
         </div>
       </div>
     </footer>
