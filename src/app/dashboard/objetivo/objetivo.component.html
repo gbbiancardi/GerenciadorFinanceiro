@@ -5,7 +5,7 @@
             <h1>Objetivo</h1>
         </div>
 
-        <form [formGroup]="objetivoForm" class="form form-objetivo">
+        <form [formGroup]="objetivoForm" (submit)="objetivoUsuario()" class="form form-objetivo">
             <div class="form-group">
                 <label for="descricaoObjetivo">Objetivo</label>
                 <input formControlName="descricao" type="text" class="form-control" id="descricaoObjetivo"

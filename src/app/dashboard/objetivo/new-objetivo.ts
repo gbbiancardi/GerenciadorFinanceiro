@@ -1,7 +1,7 @@
 export interface NewObjetivo {
     descricao: string,
     meta: number,
-    dataEstipulada: Date,
+    dataEstipulada: string,
     tipoObjetivo: string,
     statusObjetivo: string
 }

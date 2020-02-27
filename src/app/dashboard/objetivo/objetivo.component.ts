@@ -3,6 +3,8 @@ import { ObjetivoService } from './objetivo.service';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
+import { NewObjetivo } from './new-objetivo';
+import { error } from 'util';
 
 @Component({
   selector: 'app-objetivo',
@@ -34,15 +36,15 @@ export class ObjetivoComponent implements OnInit {
     });
   }
 
-  // signup() {
+  objetivoUsuario() {
 
-  //   const newUser = this.objetivoService.getRawValue() as NewUser;
-  //   this.objetivoService
-  //     .signup(newUser)
-  //     .subscribe(
-  //       () => this.router.navigate(['login']),
-  //       err => console.log(error)
-  //     );
-  // }
+    const newObjetivo = this.objetivoForm.getRawValue() as NewObjetivo;
+    this.objetivoService
+      .addObjetivo(newObjetivo)
+      .subscribe(
+        () => this.router.navigate(['dashboard']),
+        err => console.log(error)
+      );
+  }
 
 }
