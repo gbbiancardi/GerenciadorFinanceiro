@@ -13,6 +13,9 @@ import { GraficoComponent } from './grafico/grafico.component';
 import { DashboardRoutingModule } from './dashboard.routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { CoreModule } from '../core/core.module';
+import { ObjetivoService } from './objetivo/objetivo.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VMessageModule } from '../shared/components/vmessage/vmessage.module';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,15 @@ import { CoreModule } from '../core/core.module';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     ChartsModule,
+    VMessageModule,
     CoreModule,
     DashboardRoutingModule
+  ],
+  providers: [
+    ObjetivoService
   ],
   exports: [
     HeaderComponent

@@ -4,33 +4,59 @@
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1>Objetivo</h1>
         </div>
-        <form action="cadastroObjetivo">
+
+        <form [formGroup]="objetivoForm" class="form form-objetivo">
             <div class="form-group">
-                <label for="objetivoUsuario">Objetivo</label>
-                <input type="text" class="form-control" name="objetivoUsuario" id="objetivoUsuario"
-                    placeholder="Digite aqui seu objetivo" required="required">
+                <label for="descricaoObjetivo">Objetivo</label>
+                <input formControlName="descricao" type="text" class="form-control" id="descricaoObjetivo"
+                    placeholder="Digite aqui seu objetivo">
+                <ap-vmessage *ngIf="!!objetivoForm.get('descricao').errors?.required" text="Objetivo é obrigatório!">
+                </ap-vmessage>
+                <ap-vmessage *ngIf="!!objetivoForm.get('descricao').errors?.maxlength" text="Máximo de 50 caracteres!">
+                </ap-vmessage>
             </div>
 
             <div class="form-row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="metaUsuario">Meta</label>
                     <div class="input-group">
                         <span class="input-group-text">$</span>
-                        <input type="number" class="form-control" name="metaUsuario" id="metaUsuario"
-                            placeholder="Digite aqui sua meta a ser poupada" required="required" min="0.00"
-                            max="10000000.00" step="0.01">
+                        <input formControlName="meta" type="number" class="form-control" id="metaUsuario"
+                            placeholder="Valor a ser poupado" min="0.00" max="10000000.00">
                     </div>
+                    <ap-vmessage *ngIf="!!objetivoForm.get('meta').errors?.required" text="Meta é obrigatória!">
+                    </ap-vmessage>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-4">
                     <label for="dataMeta">Data Estipulada</label>
-                    <input type="date" class="form-control" name="dataMeta" id="dataMeta" required="required">
+                    <input formControlName="dataEstipulada" type="date" class="form-control" id="dataMeta">
+                    <ap-vmessage *ngIf="!!objetivoForm.get('dataEstipulada').errors?.required"
+                        text="Data Estipulada é obrigatória!">
+                    </ap-vmessage>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="tipoObjetivo">Tipo de Objetivo</label>
+                    <select formControlName="tipoObjetivo" id="tipoObjetivo" class="form-control">
+                        <option value="TURISMO">Turismo</option>
+                        <option value="EDUCACAO">Educação</option>
+                        <option value="IMOVEL">Imóvel</option>
+                        <option value="AUTOMOVEL">Automóvel</option>
+                        <option value="DIVIDA">Dívida</option>
+                        <option value="LAZER">Lazer</option>
+                        <option value="PREVIDENCIA">Previdência</option>
+                    </select>
+                    <ap-vmessage *ngIf="!!objetivoForm.get('tipoObjetivo').errors?.required"
+                        text="Tipo de Objetivo é obrigatório!">
+                    </ap-vmessage>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-2">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Enviar</button>
+                    <button [disabled]="objetivoForm.invalid" type="submit"
+                        class="btn btn-primary btn-lg btn-block">Enviar</button>
                 </div>
             </div>
         </form>
+
     </div>
 </main>
