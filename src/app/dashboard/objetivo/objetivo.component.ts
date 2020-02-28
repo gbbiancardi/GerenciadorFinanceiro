@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ObjetivoService } from './objetivo.service';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
 import { NewObjetivo } from './new-objetivo';
 import { error } from 'util';
 
@@ -18,8 +17,7 @@ export class ObjetivoComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private objetivoService: ObjetivoService,
-    private router: Router,
-    private platformDetectorService: PlatformDetectorService
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +37,7 @@ export class ObjetivoComponent implements OnInit {
   objetivoUsuario() {
 
     const newObjetivo = this.objetivoForm.getRawValue() as NewObjetivo;
+
     this.objetivoService
       .addObjetivo(newObjetivo)
       .subscribe(
