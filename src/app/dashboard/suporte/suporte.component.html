@@ -1,3 +1,45 @@
+<div class="mobile-layout container">
+    <div class="mt-4 text-center">
+        <!-- <img class="img-perfil" src="../../../assets/img/img-perfil.png" alt="Imagem perfil"> -->
+        <h1 class="mb-3 mt-2 font-weight-normal">Suporte</h1>
+    </div>
+    <form [formGroup]="suporteForm" (submit)="enviarEmail()" class="form-suporte">
+        <div class="form-group">
+            <label for="tipoAssunto">Selecione o Assunto</label>
+            <select formControlName="assunto" class="form-control" id="tipoAssunto">
+                <option value="Problema com a Conta">Problema com a Conta</option>
+                <option value="Recuperação de Senha">Recuperação de Senha</option>
+                <option value="Problema com o Sistema">Problema com o Sistema</option>
+                <option value="Outro">Outro</option>
+            </select>
+            <ap-vmessage *ngIf="!!suporteForm.get('assunto').errors?.required"
+                text="Escolha do assunto é obrigatório!">
+            </ap-vmessage>
+        </div>
+
+        <div class="form-group">
+            <label for="tituloMensagem">Título</label>
+            <input formControlName="titulo" class="form-control" id="tituloMensagem" type="text">
+            <ap-vmessage *ngIf="!!suporteForm.get('titulo').errors?.required" text="Título é obrigatório!">
+            </ap-vmessage>
+        </div>
+
+        <div class="form-group">
+            <label for="textoSuporte">Mensagem</label>
+            <textarea formControlName="mensagem" class="form-control" id="textoSuporte" rows="5"></textarea>
+            <ap-vmessage *ngIf="!!suporteForm.get('mensagem').errors?.required" text="Mensagem é obrigatória!">
+            </ap-vmessage>
+            <ap-vmessage *ngIf="!!suporteForm.get('mensagem').errors?.maxlength" text="Máximo de 255 caracteres!">
+            </ap-vmessage>
+        </div>
+
+        <button [disabled]="suporteForm.invalid" type="submit" [routerLink]="[ '/dashboard' ]"
+            class="btn btn-primary btn-block">Enviar</button>
+
+    </form>
+
+</div>
+
 <div class="desktop-layout container">
     <div class="mt-4 text-center">
         <!-- <img class="img-perfil" src="../../../assets/img/img-perfil.png" alt="Imagem perfil"> -->
@@ -8,67 +50,43 @@
         </div>
 
         <div class="col">
-            <form class="form-suporte">
-
+            <form [formGroup]="suporteForm" (submit)="enviarEmail()" class="form-suporte">
                 <div class="form-group">
                     <label for="tipoAssunto">Selecione o Assunto</label>
-                    <select class="form-control" id="tipoAssunto">
-                        <option>Problema com a Conta</option>
-                        <option>Recuperação de Senha</option>
-                        <option>Problema com o Sistema</option>
-                        <option>Outro</option>
+                    <select formControlName="assunto" class="form-control" id="tipoAssunto">
+                        <option value="Problema com a Conta">Problema com a Conta</option>
+                        <option value="Recuperação de Senha">Recuperação de Senha</option>
+                        <option value="Problema com o Sistema">Problema com o Sistema</option>
+                        <option value="Outro">Outro</option>
                     </select>
+                    <ap-vmessage *ngIf="!!suporteForm.get('assunto').errors?.required"
+                        text="Escolha do assunto é obrigatório!">
+                    </ap-vmessage>
                 </div>
-
+        
                 <div class="form-group">
-                    <label for="tituloMensagem">Título Mensagem</label>
-                    <input class="form-control" id="tituloMensagem" type="text">
+                    <label for="tituloMensagem">Título</label>
+                    <input formControlName="titulo" class="form-control" id="tituloMensagem" type="text">
+                    <ap-vmessage *ngIf="!!suporteForm.get('titulo').errors?.required" text="Título é obrigatório!">
+                    </ap-vmessage>
                 </div>
-
+        
                 <div class="form-group">
-                    <label for="textoSuporte">Descrição Mensagem</label>
-                    <textarea class="form-control" id="textoSuporte" rows="5"></textarea>
+                    <label for="textoSuporte">Mensagem</label>
+                    <textarea formControlName="mensagem" class="form-control" id="textoSuporte" rows="5"></textarea>
+                    <ap-vmessage *ngIf="!!suporteForm.get('mensagem').errors?.required" text="Mensagem é obrigatória!">
+                    </ap-vmessage>
+                    <ap-vmessage *ngIf="!!suporteForm.get('mensagem').errors?.maxlength" text="Máximo de 255 caracteres!">
+                    </ap-vmessage>
                 </div>
-
-                <button type="submit" [routerLink]="[ '/dashboard/suporte' ]"
+        
+                <button [disabled]="suporteForm.invalid" type="submit" [routerLink]="[ '/dashboard' ]"
                     class="btn btn-primary btn-block">Enviar</button>
-
+        
             </form>
         </div>
 
         <div class="col">
         </div>
     </div>
-</div>
-
-<div class="mobile-layout container">
-    <div class="mt-4 text-center">
-        <!-- <img class="img-perfil" src="../../../assets/img/img-perfil.png" alt="Imagem perfil"> -->
-        <h1 class="mb-3 mt-2 font-weight-normal">Suporte</h1>
-    </div>
-    <form class="form-suporte">
-        <div class="form-group">
-            <label for="tipoAssunto">Selecione o Assunto</label>
-            <select class="form-control" id="tipoAssunto">
-                <option>Problema com a Conta</option>
-                <option>Recuperação de Senha</option>
-                <option>Problema com o Sistema</option>
-                <option>Outro</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="tituloMensagem">Título Mensagem</label>
-            <input class="form-control" id="tituloMensagem" type="text">
-        </div>
-
-        <div class="form-group">
-            <label for="textoSuporte">Descrição Mensagem</label>
-            <textarea class="form-control" id="textoSuporte" rows="5"></textarea>
-        </div>
-
-        <button type="submit" [routerLink]="[ '/dashboard/suporte' ]" class="btn btn-primary btn-block">Enviar</button>
-
-    </form>
-
 </div>
