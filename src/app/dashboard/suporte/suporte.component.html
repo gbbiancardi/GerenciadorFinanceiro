@@ -1,4 +1,4 @@
-<!-- <div class="mobile-layout container">
+<div class="mobile-layout container">
     <div class="mt-4 text-center">
         <h1 class="mb-3 mt-2 font-weight-normal">Suporte</h1>
     </div>
@@ -11,8 +11,7 @@
                 <option value="Problema com o Sistema">Problema com o Sistema</option>
                 <option value="Outro">Outro</option>
             </select>
-            <ap-vmessage *ngIf="!!suporteForm.get('assunto').errors?.required"
-                text="Escolha do assunto é obrigatório!">
+            <ap-vmessage *ngIf="!!suporteForm.get('assunto').errors?.required" text="Escolha do assunto é obrigatório!">
             </ap-vmessage>
         </div>
 
@@ -32,11 +31,10 @@
             </ap-vmessage>
         </div>
 
-        <button [disabled]="suporteForm.invalid" type="submit" [routerLink]="[ '/dashboard' ]"
-            class="btn btn-primary btn-block">Enviar</button>
+        <button [disabled]="suporteForm.invalid" type="submit" class="btn btn-primary btn-block">Enviar</button>
 
     </form>
-</div> -->
+</div>
 
 <!-- Divisão Layout mobile e desktop -->
 
