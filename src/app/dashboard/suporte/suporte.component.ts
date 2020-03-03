@@ -44,6 +44,10 @@ export class SuporteComponent implements OnInit {
         () => this.router.navigate(['dashboard']),
         err => console.log(error)
       );
+
+    alert("Mensagem enviada com sucesso!");
+    
+    this.suporteForm.reset(FormGroup);
   }
 
 }
