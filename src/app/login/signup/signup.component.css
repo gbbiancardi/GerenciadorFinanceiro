@@ -3,7 +3,11 @@
 }
 
 .login-img{
-    width: 38.2rem;
+    width: 23rem;
+}
+
+.login-img-mobile{
+    width: 13rem;
 }
 
 .row-login-mobile {
