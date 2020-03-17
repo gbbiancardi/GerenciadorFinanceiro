@@ -80,6 +80,17 @@ footer {
     color: white;
 }
 
+@media screen and (min-width: 1920px) and (orientation:landscape) {
+    
+    .img-sessao-01 {
+        width: 85%;
+    }
+
+    .texto-sessao01 {
+        margin-left: 5rem;
+    }
+}
+
 @media screen and (max-width: 414px) {
 
     .navbar-desktop {

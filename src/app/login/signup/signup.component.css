@@ -30,6 +30,13 @@
     border: none;
 }
 
+@media screen and (min-width: 1920px) and (orientation:landscape) {
+
+    .login-img{
+        width: 31.7rem;
+    }
+}
+
 @media screen and (max-width: 414px) {
 
     .img-login {

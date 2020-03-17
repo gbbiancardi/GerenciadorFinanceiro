@@ -30,7 +30,17 @@
     border: none;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 1920px) and (orientation:landscape) {
+    .img-login {
+        width: 80%;
+    }
+
+    .login-img{
+        width: 35.9rem;
+    }
+}
+
+@media screen and (max-width: 414px) and (orientation:portrait) {
 
     .img-login {
         display: none;
