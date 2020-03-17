@@ -89,6 +89,11 @@ footer {
     .texto-sessao01 {
         margin-left: 5rem;
     }
+
+    .conteudo {
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
 }
 
 @media screen and (max-width: 414px) {
