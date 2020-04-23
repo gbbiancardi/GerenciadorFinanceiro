@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import { PlatformDetectorService } from 'src/app/core/platform/platform-detector.service';
 import { SignInService } from './signin.service';
-// import { AuthService } from 'src/app/core/auth/auth.service';
+import { AuthService } from 'src/app/core/auth/auth.service';
 
 @Component({
     selector: 'app-signin',
@@ -33,7 +33,7 @@ export class SignInComponent implements OnInit {
 
     constructor(
         private fb: FormBuilder,
-        // private authService: AuthService,
+        private authService: AuthService,
         private signInService: SignInService,
         private router: Router,
         private platformDetectorService: PlatformDetectorService
@@ -46,32 +46,33 @@ export class SignInComponent implements OnInit {
 
     login() {
 
-        const email = this.signInForm.get('email').value;
-        const senha = this.signInForm.get('senha').value;
+        // const email = this.signInForm.get('email').value;
+        // const senha = this.signInForm.get('senha').value;
 
-        this.signInService.login(email,senha).subscribe(
-            () => this.router.navigate(['dashboard']),
-            err => {
-                console.log(err);
-                this.signInForm.reset();
-                this.platformDetectorService.isPlatformBrowser() &&
-                    this.emailInput.nativeElement.focus();
-                alert('E-mail ou Senha inválido!');
-            }
-        );
+        //     this.signInService.login(email,senha).subscribe(
+        //         () => this.router.navigate(['dashboard']),
+        //         err => {
+        //             console.log(err);
+        //             this.signInForm.reset();
+        //             this.platformDetectorService.isPlatformBrowser() &&
+        //                 this.emailInput.nativeElement.focus();
+        //             alert('E-mail ou Senha inválido!');
+        //         }
+        //     );
+        // }
+        this.authService
+
+            .authenticate(this.signInForm.value)
+            .subscribe(
+                () => this.router.navigate(['dashboard']),
+                err => {
+                    console.log(err);
+                    this.signInForm.reset();
+                    this.platformDetectorService.isPlatformBrowser() &&
+                        this.emailInput.nativeElement.focus();
+                    alert('Email ou Senha invalidos!');
+                }
+            );
     }
-    // this.authService
-    //     .authenticate(email, senha)
-    //     .subscribe(
-    //         () => this.router.navigate(['dashboard']),
-    //         err => {
-    //             console.log(err);
-    //             this.signInForm.reset();
-    //             this.platformDetectorService.isPlatformBrowser() &&
-    //                 this.emailInput.nativeElement.focus();
-    //             alert('Email ou Senha invalidos!');
-    //         }
-    //     );
-    // }
 
 }
